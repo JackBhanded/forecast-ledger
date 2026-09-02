@@ -1,0 +1,45 @@
+{
+  "timezone": "Asia/Kolkata",
+  "snapshot_hour_ist": 6,
+  "locations": [
+    {
+      "id": "pune",
+      "name": "Pune, Maharashtra",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    {
+      "id": "kalaburagi",
+      "name": "Kalaburagi (Gulbarga), Karnataka",
+      "latitude": 17.3297,
+      "longitude": 76.8343
+    }
+  ],
+  "weather_models": [
+    "best_match",
+    "ecmwf_ifs025",
+    "gfs_seamless",
+    "icon_seamless"
+  ],
+  "weather_lead_days": [1, 2, 3],
+  "endpoints": {
+    "swpc_kp_forecast": "https://services.swpc.noaa.gov/products/noaa-planetary-k-index-forecast.json",
+    "swpc_kp_observed": "https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json",
+    "swpc_flare_probabilities": "https://services.swpc.noaa.gov/json/solar_probabilities.json",
+    "swpc_alerts": "https://services.swpc.noaa.gov/products/alerts.json",
+    "swpc_xray_flares_7day": "https://services.swpc.noaa.gov/json/goes/primary/xray-flares-7-day.json",
+    "open_meteo_forecast": "https://api.open-meteo.com/v1/forecast"
+  },
+  "scoring": {
+    "kp_hit_tolerance": 1.0,
+    "kp_partial_tolerance": 2.0,
+    "storm_kp_threshold": 5.0,
+    "precip_event_mm": 1.0,
+    "tmax_hit_tolerance_c": 2.0,
+    "tmax_partial_tolerance_c": 3.0
+  },
+  "attribution": {
+    "weather": "Weather data by Open-Meteo.com (CC-BY-4.0)",
+    "sun": "Space weather data by NOAA Space Weather Prediction Center"
+  }
+}

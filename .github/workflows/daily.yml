@@ -1,0 +1,42 @@
+name: Daily ledger run
+
+on:
+  schedule:
+    # 00:30 UTC = 06:00 IST — the fixed snapshot time of record
+    - cron: "30 0 * * *"
+  workflow_dispatch: {}   # manual "Run workflow" button for testing
+
+permissions:
+  contents: write
+
+jobs:
+  ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      # 1. Ground truth for yesterday
+      - name: Fetch observations (yesterday)
+        run: python scripts/fetch_observed.py
+
+      # 2. Verdicts for every claim that targeted yesterday
+      - name: Score yesterday's claims
+        run: python scripts/score.py
+
+      # 3. Today's predictions — the new snapshot of record
+      - name: Snapshot today's predictions
+        run: python scripts/fetch_predictions.py
+
+      - name: Commit the day's entry
+        run: |
+          git config user.name "ledger-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data
+          git diff --cached --quiet || git commit -m "ledger: $(date -u +%F) daily run"
+          git push

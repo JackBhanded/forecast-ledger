@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Forecast Ledger — predictions with receipts</title>
+<meta name="description" content="Every day: what each forecast source predicted, what actually happened, and who you can trust. Free forever. No ads, no accounts, no tracking.">
+<style>
+  /* Self-hosted fonts (latin subsets) — zero external requests, per PLEDGE.md */
+  @font-face{font-family:'Archivo Black';font-style:normal;font-weight:400;
+    font-display:swap;src:url(fonts/archivo-black-400-latin.woff2) format('woff2')}
+  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;
+    font-display:swap;src:url(fonts/ibm-plex-mono-400-latin.woff2) format('woff2')}
+  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:600;
+    font-display:swap;src:url(fonts/ibm-plex-mono-600-latin.woff2) format('woff2')}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400 600;
+    font-display:swap;src:url(fonts/ibm-plex-sans-400-600-latin.woff2) format('woff2')}
+
+  :root{
+    --paper:#F4F6F2; --ink:#16211B; --muted:#5C6A60; --rule:#C9D1C6;
+    --verify:#1E7A46; --miss:#AC3A2E; --watch:#A87A1C; --data:#2D5D8C;
+    --card:#FBFCFA;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:15px; line-height:1.55;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px 64px}
+
+  /* Masthead */
+  header{border-bottom:3px solid var(--ink);padding:34px 0 18px;margin-bottom:8px}
+  .masthead{font-family:"Archivo Black",sans-serif;font-size:clamp(28px,6vw,46px);
+    line-height:1.05;letter-spacing:-.01em;text-transform:uppercase}
+  .masthead em{font-style:normal;color:var(--verify)}
+  .tagline{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+    margin-top:10px;letter-spacing:.02em}
+  .pledge-line{display:inline-block;margin-top:12px;padding:5px 10px;
+    border:1.5px solid var(--ink);font-family:"IBM Plex Mono",monospace;
+    font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+
+  /* Section headings styled as ledger tabs */
+  h2{font-family:"Archivo Black",sans-serif;font-size:15px;text-transform:uppercase;
+    letter-spacing:.06em;margin:40px 0 4px;display:flex;align-items:baseline;gap:10px}
+  h2 .rule{flex:1;border-bottom:1.5px solid var(--ink);transform:translateY(-4px)}
+  .section-note{font-size:12.5px;color:var(--muted);margin-bottom:14px}
+
+  /* Scoreboard */
+  table{width:100%;border-collapse:collapse;font-size:13px;background:var(--card)}
+  th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;text-transform:uppercase;
+    letter-spacing:.07em;color:var(--muted);text-align:left;padding:8px 8px;
+    border-bottom:1.5px solid var(--ink)}
+  td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:middle}
+  td.num,th.num{text-align:right;font-family:"IBM Plex Mono",monospace}
+  .src{font-weight:600}
+  .bar{position:relative;height:9px;background:#E3E8E1;min-width:90px;border-radius:1px}
+  .bar>i{position:absolute;inset:0 auto 0 0;background:var(--verify);border-radius:1px}
+  .bar.low>i{background:var(--miss)}
+  .bar.mid>i{background:var(--watch)}
+
+  /* Ledger entries */
+  .day{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--ink);
+    margin:14px 0;padding:14px 16px}
+  .day-date{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:13px;
+    letter-spacing:.04em}
+  .claim{display:flex;gap:12px;align-items:flex-start;padding:9px 0;
+    border-top:1px dashed var(--rule)}
+  .claim:first-of-type{margin-top:10px}
+  .claim p{flex:1;font-size:13.5px}
+  .claim .meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
+
+  /* Signature: the verdict stamp */
+  .stamp{flex:0 0 auto;font-family:"IBM Plex Mono",monospace;font-weight:600;
+    font-size:11px;letter-spacing:.18em;padding:3px 9px 2px;border:2px solid;
+    text-transform:uppercase;transform:rotate(-3deg);border-radius:2px;
+    margin-top:2px;user-select:none}
+  .stamp.hit{color:var(--verify);border-color:var(--verify)}
+  .stamp.miss{color:var(--miss);border-color:var(--miss)}
+  .stamp.partial{color:var(--watch);border-color:var(--watch);transform:rotate(2deg)}
+  .stamp.pending{color:var(--muted);border-color:var(--rule);transform:none;
+    border-style:dashed;font-weight:400}
+
+  .brier{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--data)}
+
+  /* Seed audit card */
+  .seed{background:var(--card);border:1.5px solid var(--ink);padding:16px 18px;margin-top:14px}
+  .seed h3{font-family:"Archivo Black",sans-serif;font-size:13.5px;text-transform:uppercase;
+    letter-spacing:.04em;margin-bottom:8px}
+  .seed .big{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:600;
+    color:var(--miss)}
+  .seed p{font-size:13px;margin-top:8px}
+  .seed .lesson{border-left:3px solid var(--verify);padding-left:10px;color:var(--muted);
+    font-size:12.5px;margin-top:10px}
+
+  .empty{border:1.5px dashed var(--rule);padding:22px;text-align:center;
+    color:var(--muted);font-size:13px;background:var(--card)}
+
+  footer{margin-top:52px;border-top:3px solid var(--ink);padding-top:14px;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);line-height:1.8}
+  footer b{color:var(--ink)}
+  a{color:var(--data)}
+  .stamp:focus-visible,a:focus-visible{outline:2px solid var(--data);outline-offset:2px}
+  @media (max-width:560px){ .claim{flex-wrap:wrap} .bar{min-width:64px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="masthead">The Forecast<br>Ledger <em>▸</em></div>
+  <div class="tagline">predictions recorded at 06:00 IST · verified against observations the next day · every verdict public, forever</div><br>
+  <span class="pledge-line">Free forever · no ads · no accounts · no tracking</span>
+</header>
+
+<h2>Scoreboard <span class="rule"></span></h2>
+<p class="section-note">Running record per source, metric, and lead time. Hit rate is categorical accuracy; Brier measures probability honesty (0 = perfect, 0.25 = coin-flip on a 50% call — lower is better).</p>
+<div id="scoreboard"><div class="empty">The scoreboard fills after the first scored day. Run the daily workflow twice (one day apart) and the first verdicts appear here.</div></div>
+
+<h2>The Ledger <span class="rule"></span></h2>
+<p class="section-note">Newest first. Each claim carries its verdict stamp once observations arrive.</p>
+<div id="ledger"><div class="empty">No entries yet — the ledger opens with its first automated snapshot at 06:00 IST.</div></div>
+
+<h2>Why this exists <span class="rule"></span></h2>
+<div class="seed" id="seed">
+  <h3>Pre-ledger audit · August 2026</h3>
+  <div class="big" id="seed-stat">0 / 9</div>
+  <p id="seed-text">Loading the founding audit…</p>
+  <p class="lesson" id="seed-lesson"></p>
+</div>
+
+<footer>
+  <b>The Jack Promise:</b> free forever, no ads, no hooks. If you're seeing ads on this data, someone copied it — the original lives here.<br>
+  Code MIT · Data CC-BY-4.0 · Space weather by NOAA SWPC · Weather data by <a href="https://open-meteo.com" rel="noopener">Open-Meteo.com</a> (CC-BY-4.0)<br>
+  Built in Pune &amp; Kalaburagi, for everyone.
+</footer>
+
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const j = async p => { const r = await fetch(p); if(!r.ok) throw 0; return r.json(); };
+
+function stamp(v){
+  const cls = v ? v.toLowerCase() : "pending";
+  const txt = v || "awaiting obs";
+  return `<span class="stamp ${cls}">${txt}</span>`;
+}
+
+async function renderScoreboard(){
+  try{
+    const board = await j("data/scoreboard.json");
+    const rows = Object.values(board).sort((a,b)=> (b.hit_rate??0)-(a.hit_rate??0));
+    if(!rows.length) return;
+    let html = `<table><tr><th>Source</th><th>Metric</th><th class="num">Lead</th><th class="num">N</th><th>Hit rate</th><th class="num">Brier</th></tr>`;
+    for(const r of rows){
+      const pct = r.hit_rate==null ? null : Math.round(r.hit_rate*100);
+      const cls = pct==null ? "" : pct>=70 ? "" : pct>=45 ? "mid" : "low";
+      html += `<tr><td class="src">${r.source}</td><td>${r.metric.replaceAll("_"," ")}</td>
+        <td class="num">${r.lead_days}d</td><td class="num">${r.n}</td>
+        <td><div class="bar ${cls}" title="${pct??"–"}%"><i style="width:${pct??0}%"></i></div>
+        <span class="meta">${pct==null?"–":pct+"%"} (${r.hits}✓ ${r.partials}~ ${r.misses}✗)</span></td>
+        <td class="num">${r.mean_brier ?? "–"}</td></tr>`;
+    }
+    $("scoreboard").innerHTML = html + "</table>";
+  }catch(e){ /* keep empty state */ }
+}
+
+async function renderLedger(){
+  try{
+    const manifest = await j("data/manifest.json");
+    const days = manifest.days.slice(0, 14);
+    if(!days.length) return;
+    let html = "";
+    for(const d of days){
+      for(const domain of d.domains){
+        let pred, scores = {};
+        try{ pred = await j(`data/${domain}/${d.date}/predictions.json`); }catch(e){ continue; }
+        try{ const s = await j(`data/${domain}/${d.date}/scores.json`);
+             for(const sc of s.scores) scores[sc.claim_id] = sc; }catch(e){}
+        const claims = pred.claims.slice(0, 12);
+        if(!claims.length) continue;
+        html += `<div class="day"><span class="day-date">${d.date} · ${domain.toUpperCase()}</span>`;
+        for(const c of claims){
+          const sc = scores[c.id];
+          html += `<div class="claim">${stamp(sc?.verdict)}<p>${c.statement}
+            <span class="meta"> · ${c.type} · lead ${c.lead_days}d${
+              sc?.brier!==undefined ? ` · <span class="brier">Brier ${sc.brier}</span>`:""}${
+              sc?.observed_value!==undefined ? ` · observed: ${sc.observed_value}`:""}</span></p></div>`;
+        }
+        html += `</div>`;
+      }
+    }
+    if(html) $("ledger").innerHTML = html;
+  }catch(e){ /* keep empty state */ }
+}
+
+async function renderSeed(){
+  try{
+    const s = await j("data/sun/_seed/august-2026-audit.json");
+    $("seed-stat").textContent =
+      `${s.result.watches_verified} / ${s.result.watches_issued_on_days_flagged}`;
+    $("seed-text").textContent =
+      `Of ${s.result.watches_issued_on_days_flagged} days flagged for G1+ geomagnetic storms in August 2026, `
+      + `${s.result.watches_verified} verified. The month's ${s.observed_record.storm_days.length} real storms `
+      + `(${s.observed_record.storm_days.join(", ")}) fell on days nobody flagged. `
+      + `Hand-audited against the observed Kp record — the finding that started this project.`;
+    $("seed-lesson").textContent = s.lesson;
+  }catch(e){
+    $("seed-text").textContent = "Founding audit data unavailable.";
+  }
+}
+
+renderScoreboard(); renderLedger(); renderSeed();
+</script>
+</body>
+</html>

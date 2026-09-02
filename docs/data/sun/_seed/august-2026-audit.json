@@ -1,0 +1,32 @@
+{
+ "title": "Pre-ledger audit: August 2026 geomagnetic watch verification",
+ "method": "Hand-audit of G1+ storm expectations relayed from public space-weather forecasts (EarthSky, Met Office, NOAA SWPC watches) vs the observed Kp record (XRAS/GFZ historical calendar).",
+ "period": "2026-08-01 to 2026-08-26",
+ "observed_record": {
+  "storm_days": [
+   "2026-08-02",
+   "2026-08-08"
+  ],
+  "storm_level": "G1",
+  "month_max_kp": "6-",
+  "source": "XRAS historical Kp calendar (GFZ-derived)"
+ },
+ "predicted_storm_days_relayed": [
+  "2026-08-07",
+  "2026-08-11",
+  "2026-08-12",
+  "2026-08-14",
+  "2026-08-17",
+  "2026-08-18",
+  "2026-08-21",
+  "2026-08-24",
+  "2026-08-26"
+ ],
+ "result": {
+  "watches_verified": 0,
+  "watches_issued_on_days_flagged": 9,
+  "storms_that_occurred_on_unflagged_days": 2,
+  "note": "Systematic over-forecasting: possibility language ('chance of G1') relayed as expectation. This finding motivated the ledger."
+ },
+ "lesson": "A WATCH is not a prediction. The ledger separates OBSERVED / WATCH / MODEL / PROB claim types and scores each on its own terms."
+}
