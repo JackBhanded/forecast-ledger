@@ -1,0 +1,28 @@
+{
+ "NOAA_SWPC|flare_m_class|lead0": {
+  "source": "NOAA_SWPC",
+  "metric": "flare_m_class",
+  "lead_days": 0,
+  "n": 1,
+  "hits": 0,
+  "partials": 0,
+  "misses": 1,
+  "brier_sum": 0.81,
+  "brier_n": 1,
+  "hit_rate": 0.0,
+  "mean_brier": 0.81
+ },
+ "NOAA_SWPC|flare_x_class|lead0": {
+  "source": "NOAA_SWPC",
+  "metric": "flare_x_class",
+  "lead_days": 0,
+  "n": 1,
+  "hits": 1,
+  "partials": 0,
+  "misses": 0,
+  "brier_sum": 0.0001,
+  "brier_n": 1,
+  "hit_rate": 1.0,
+  "mean_brier": 0.0001
+ }
+}

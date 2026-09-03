@@ -1,0 +1,27 @@
+{
+ "date": "2026-09-02",
+ "scores": [
+  {
+   "claim_id": "sun-2026-09-02-swpc-flareM",
+   "source": "NOAA_SWPC",
+   "metric": "flare_m_class",
+   "lead_days": 0,
+   "type": "PROB",
+   "statement": "SWPC: 10% chance of M-class flare on 2026-09-02",
+   "observed_value": true,
+   "brier": 0.81,
+   "verdict": "MISS"
+  },
+  {
+   "claim_id": "sun-2026-09-02-swpc-flareX",
+   "source": "NOAA_SWPC",
+   "metric": "flare_x_class",
+   "lead_days": 0,
+   "type": "PROB",
+   "statement": "SWPC: 1% chance of X-class flare on 2026-09-02",
+   "observed_value": false,
+   "brier": 0.0001,
+   "verdict": "HIT"
+  }
+ ]
+}
