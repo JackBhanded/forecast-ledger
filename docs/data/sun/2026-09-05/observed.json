@@ -1,0 +1,11 @@
+{
+ "date": "2026-09-05",
+ "domain": "sun",
+ "kp_daily_max": null,
+ "kp_bins": [],
+ "g1plus_storm_occurred": null,
+ "flare_m_occurred": true,
+ "flare_x_occurred": false,
+ "largest_flare": "M1.0",
+ "fetched_utc": "2026-09-06T04:57:14.133088+00:00"
+}
