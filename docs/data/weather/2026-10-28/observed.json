@@ -1,0 +1,17 @@
+{
+ "date": "2026-10-28",
+ "domain": "weather",
+ "locations": {
+  "pune": {
+   "precipitation_sum_mm": 0.0,
+   "rain_event_occurred": false,
+   "tmax_c": 32.0
+  },
+  "kalaburagi": {
+   "precipitation_sum_mm": 0.4,
+   "rain_event_occurred": false,
+   "tmax_c": 30.3
+  }
+ },
+ "fetched_utc": "2026-10-29T06:13:52.257287+00:00"
+}
