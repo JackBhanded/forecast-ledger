@@ -1,6 +1,13 @@
 {
  "days": [
   {
+   "date": "2026-10-31",
+   "domains": [
+    "sun",
+    "weather"
+   ]
+  },
+  {
    "date": "2026-10-30",
    "domains": [
     "sun",
