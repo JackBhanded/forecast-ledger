@@ -1,0 +1,793 @@
+{
+ "date": "2026-11-09",
+ "domain": "weather",
+ "snapshot_utc": "2026-11-09T07:00:07.732747+00:00",
+ "claims": [
+  {
+   "id": "wx-2026-11-10-pune-best_match-rainprob",
+   "source": "best_match",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "probability": 0.0,
+   "statement": "best_match: 0% rain chance, Pune, Maharashtra, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-10-pune-best_match-tmax",
+   "source": "best_match",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "predicted_value": 30.9,
+   "statement": "best_match: max 30.9\u00b0C, Pune, Maharashtra, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-11-pune-best_match-rainprob",
+   "source": "best_match",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "probability": 0.0,
+   "statement": "best_match: 0% rain chance, Pune, Maharashtra, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-11-pune-best_match-tmax",
+   "source": "best_match",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "predicted_value": 30.7,
+   "statement": "best_match: max 30.7\u00b0C, Pune, Maharashtra, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-12-pune-best_match-rainprob",
+   "source": "best_match",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "probability": 0.0,
+   "statement": "best_match: 0% rain chance, Pune, Maharashtra, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-12-pune-best_match-tmax",
+   "source": "best_match",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "predicted_value": 30.7,
+   "statement": "best_match: max 30.7\u00b0C, Pune, Maharashtra, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-10-pune-ecmwf_ifs025-rainprob",
+   "source": "ecmwf_ifs025",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "probability": 0.0,
+   "statement": "ecmwf_ifs025: 0% rain chance, Pune, Maharashtra, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-10-pune-ecmwf_ifs025-tmax",
+   "source": "ecmwf_ifs025",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "predicted_value": 30.7,
+   "statement": "ecmwf_ifs025: max 30.7\u00b0C, Pune, Maharashtra, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-11-pune-ecmwf_ifs025-rainprob",
+   "source": "ecmwf_ifs025",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "probability": 0.0,
+   "statement": "ecmwf_ifs025: 0% rain chance, Pune, Maharashtra, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-11-pune-ecmwf_ifs025-tmax",
+   "source": "ecmwf_ifs025",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "predicted_value": 30.6,
+   "statement": "ecmwf_ifs025: max 30.6\u00b0C, Pune, Maharashtra, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-12-pune-ecmwf_ifs025-rainprob",
+   "source": "ecmwf_ifs025",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "probability": 0.0,
+   "statement": "ecmwf_ifs025: 0% rain chance, Pune, Maharashtra, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-12-pune-ecmwf_ifs025-tmax",
+   "source": "ecmwf_ifs025",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "predicted_value": 30.8,
+   "statement": "ecmwf_ifs025: max 30.8\u00b0C, Pune, Maharashtra, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-10-pune-gfs_seamless-rainprob",
+   "source": "gfs_seamless",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "probability": 0.0,
+   "statement": "gfs_seamless: 0% rain chance, Pune, Maharashtra, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-10-pune-gfs_seamless-tmax",
+   "source": "gfs_seamless",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "predicted_value": 30.5,
+   "statement": "gfs_seamless: max 30.5\u00b0C, Pune, Maharashtra, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-11-pune-gfs_seamless-rainprob",
+   "source": "gfs_seamless",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "probability": 0.0,
+   "statement": "gfs_seamless: 0% rain chance, Pune, Maharashtra, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-11-pune-gfs_seamless-tmax",
+   "source": "gfs_seamless",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "predicted_value": 31.0,
+   "statement": "gfs_seamless: max 31.0\u00b0C, Pune, Maharashtra, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-12-pune-gfs_seamless-rainprob",
+   "source": "gfs_seamless",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "probability": 0.0,
+   "statement": "gfs_seamless: 0% rain chance, Pune, Maharashtra, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-12-pune-gfs_seamless-tmax",
+   "source": "gfs_seamless",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "predicted_value": 31.0,
+   "statement": "gfs_seamless: max 31.0\u00b0C, Pune, Maharashtra, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-10-pune-icon_seamless-rainprob",
+   "source": "icon_seamless",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "probability": 0.0,
+   "statement": "icon_seamless: 0% rain chance, Pune, Maharashtra, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-10-pune-icon_seamless-tmax",
+   "source": "icon_seamless",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "predicted_value": 30.8,
+   "statement": "icon_seamless: max 30.8\u00b0C, Pune, Maharashtra, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-11-pune-icon_seamless-rainprob",
+   "source": "icon_seamless",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "probability": 0.0,
+   "statement": "icon_seamless: 0% rain chance, Pune, Maharashtra, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-11-pune-icon_seamless-tmax",
+   "source": "icon_seamless",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "predicted_value": 30.7,
+   "statement": "icon_seamless: max 30.7\u00b0C, Pune, Maharashtra, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-12-pune-icon_seamless-rainprob",
+   "source": "icon_seamless",
+   "location": "pune",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "probability": 0.0,
+   "statement": "icon_seamless: 0% rain chance, Pune, Maharashtra, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-12-pune-icon_seamless-tmax",
+   "source": "icon_seamless",
+   "location": "pune",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "predicted_value": 31.0,
+   "statement": "icon_seamless: max 31.0\u00b0C, Pune, Maharashtra, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-10-kalaburagi-best_match-rainprob",
+   "source": "best_match",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "probability": 0.0,
+   "statement": "best_match: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-10-kalaburagi-best_match-tmax",
+   "source": "best_match",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "predicted_value": 30.9,
+   "statement": "best_match: max 30.9\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-11-kalaburagi-best_match-rainprob",
+   "source": "best_match",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "probability": 0.0,
+   "statement": "best_match: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-11-kalaburagi-best_match-tmax",
+   "source": "best_match",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "predicted_value": 30.8,
+   "statement": "best_match: max 30.8\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-12-kalaburagi-best_match-rainprob",
+   "source": "best_match",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "probability": 0.0,
+   "statement": "best_match: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-12-kalaburagi-best_match-tmax",
+   "source": "best_match",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "predicted_value": 30.5,
+   "statement": "best_match: max 30.5\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-10-kalaburagi-ecmwf_ifs025-rainprob",
+   "source": "ecmwf_ifs025",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "probability": 0.0,
+   "statement": "ecmwf_ifs025: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-10-kalaburagi-ecmwf_ifs025-tmax",
+   "source": "ecmwf_ifs025",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "predicted_value": 30.7,
+   "statement": "ecmwf_ifs025: max 30.7\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-11-kalaburagi-ecmwf_ifs025-rainprob",
+   "source": "ecmwf_ifs025",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "probability": 0.0,
+   "statement": "ecmwf_ifs025: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-11-kalaburagi-ecmwf_ifs025-tmax",
+   "source": "ecmwf_ifs025",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "predicted_value": 30.6,
+   "statement": "ecmwf_ifs025: max 30.6\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-12-kalaburagi-ecmwf_ifs025-rainprob",
+   "source": "ecmwf_ifs025",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "probability": 0.0,
+   "statement": "ecmwf_ifs025: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-12-kalaburagi-ecmwf_ifs025-tmax",
+   "source": "ecmwf_ifs025",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "predicted_value": 30.3,
+   "statement": "ecmwf_ifs025: max 30.3\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-10-kalaburagi-gfs_seamless-rainprob",
+   "source": "gfs_seamless",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "probability": 0.0,
+   "statement": "gfs_seamless: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-10-kalaburagi-gfs_seamless-tmax",
+   "source": "gfs_seamless",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "predicted_value": 31.8,
+   "statement": "gfs_seamless: max 31.8\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-11-kalaburagi-gfs_seamless-rainprob",
+   "source": "gfs_seamless",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "probability": 0.0,
+   "statement": "gfs_seamless: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-11-kalaburagi-gfs_seamless-tmax",
+   "source": "gfs_seamless",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "predicted_value": 32.0,
+   "statement": "gfs_seamless: max 32.0\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-12-kalaburagi-gfs_seamless-rainprob",
+   "source": "gfs_seamless",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "probability": 0.0,
+   "statement": "gfs_seamless: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-12-kalaburagi-gfs_seamless-tmax",
+   "source": "gfs_seamless",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "predicted_value": 32.1,
+   "statement": "gfs_seamless: max 32.1\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-10-kalaburagi-icon_seamless-rainprob",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "probability": 0.0,
+   "statement": "icon_seamless: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-10-kalaburagi-icon_seamless-tmax",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-10",
+   "lead_days": 1,
+   "predicted_value": 32.6,
+   "statement": "icon_seamless: max 32.6\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-10"
+  },
+  {
+   "id": "wx-2026-11-11-kalaburagi-icon_seamless-rainprob",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "probability": 0.0,
+   "statement": "icon_seamless: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-11-kalaburagi-icon_seamless-tmax",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-11",
+   "lead_days": 2,
+   "predicted_value": 32.9,
+   "statement": "icon_seamless: max 32.9\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-11"
+  },
+  {
+   "id": "wx-2026-11-12-kalaburagi-icon_seamless-rainprob",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "probability": 0.0,
+   "statement": "icon_seamless: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-12"
+  },
+  {
+   "id": "wx-2026-11-12-kalaburagi-icon_seamless-tmax",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-12",
+   "lead_days": 3,
+   "predicted_value": 32.5,
+   "statement": "icon_seamless: max 32.5\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-12"
+  }
+ ],
+ "raw": {
+  "pune:best_match": {
+   "time": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12"
+   ],
+   "precipitation_sum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "precipitation_probability_max": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "temperature_2m_max": [
+    30.9,
+    30.9,
+    30.7,
+    30.7
+   ],
+   "temperature_2m_min": [
+    18.8,
+    18.6,
+    18.8,
+    19.0
+   ]
+  },
+  "pune:ecmwf_ifs025": {
+   "time": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12"
+   ],
+   "precipitation_sum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "precipitation_probability_max": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "temperature_2m_max": [
+    30.7,
+    30.7,
+    30.6,
+    30.8
+   ],
+   "temperature_2m_min": [
+    18.3,
+    17.9,
+    17.7,
+    17.7
+   ]
+  },
+  "pune:gfs_seamless": {
+   "time": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12"
+   ],
+   "precipitation_sum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "precipitation_probability_max": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "temperature_2m_max": [
+    31.0,
+    30.5,
+    31.0,
+    31.0
+   ],
+   "temperature_2m_min": [
+    21.5,
+    21.1,
+    21.8,
+    21.9
+   ]
+  },
+  "pune:icon_seamless": {
+   "time": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12"
+   ],
+   "precipitation_sum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "precipitation_probability_max": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "temperature_2m_max": [
+    30.7,
+    30.8,
+    30.7,
+    31.0
+   ],
+   "temperature_2m_min": [
+    16.2,
+    15.6,
+    16.1,
+    15.5
+   ]
+  },
+  "kalaburagi:best_match": {
+   "time": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12"
+   ],
+   "precipitation_sum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "precipitation_probability_max": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "temperature_2m_max": [
+    30.8,
+    30.9,
+    30.8,
+    30.5
+   ],
+   "temperature_2m_min": [
+    20.9,
+    19.3,
+    19.2,
+    19.3
+   ]
+  },
+  "kalaburagi:ecmwf_ifs025": {
+   "time": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12"
+   ],
+   "precipitation_sum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "precipitation_probability_max": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "temperature_2m_max": [
+    31.2,
+    30.7,
+    30.6,
+    30.3
+   ],
+   "temperature_2m_min": [
+    21.0,
+    18.9,
+    18.5,
+    18.7
+   ]
+  },
+  "kalaburagi:gfs_seamless": {
+   "time": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12"
+   ],
+   "precipitation_sum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "precipitation_probability_max": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "temperature_2m_max": [
+    31.8,
+    31.8,
+    32.0,
+    32.1
+   ],
+   "temperature_2m_min": [
+    18.8,
+    17.4,
+    16.9,
+    16.9
+   ]
+  },
+  "kalaburagi:icon_seamless": {
+   "time": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12"
+   ],
+   "precipitation_sum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "precipitation_probability_max": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "temperature_2m_max": [
+    32.9,
+    32.6,
+    32.9,
+    32.5
+   ],
+   "temperature_2m_min": [
+    20.4,
+    19.8,
+    18.5,
+    19.3
+   ]
+  }
+ }
+}
