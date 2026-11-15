@@ -3,27 +3,27 @@
   "source": "NOAA_SWPC",
   "metric": "flare_m_class",
   "lead_days": 0,
-  "n": 3,
-  "hits": 0,
+  "n": 4,
+  "hits": 1,
   "partials": 0,
   "misses": 3,
-  "brier_sum": 1.8925,
-  "brier_n": 3,
-  "hit_rate": 0.0,
-  "mean_brier": 0.6308
+  "brier_sum": 1.9325,
+  "brier_n": 4,
+  "hit_rate": 0.25,
+  "mean_brier": 0.4831
  },
  "NOAA_SWPC|flare_x_class|lead0": {
   "source": "NOAA_SWPC",
   "metric": "flare_x_class",
   "lead_days": 0,
-  "n": 3,
-  "hits": 3,
+  "n": 4,
+  "hits": 4,
   "partials": 0,
   "misses": 0,
-  "brier_sum": 0.0027,
-  "brier_n": 3,
+  "brier_sum": 0.0052,
+  "brier_n": 4,
   "hit_rate": 1.0,
-  "mean_brier": 0.0009
+  "mean_brier": 0.0013
  },
  "best_match|rain_event|lead1": {
   "source": "best_match",

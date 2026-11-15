@@ -1,0 +1,27 @@
+{
+ "date": "2026-11-14",
+ "scores": [
+  {
+   "claim_id": "sun-2026-11-14-swpc-flareM",
+   "source": "NOAA_SWPC",
+   "metric": "flare_m_class",
+   "lead_days": 0,
+   "type": "PROB",
+   "statement": "SWPC: 20% chance of M-class flare on 2026-11-14",
+   "observed_value": false,
+   "brier": 0.04,
+   "verdict": "HIT"
+  },
+  {
+   "claim_id": "sun-2026-11-14-swpc-flareX",
+   "source": "NOAA_SWPC",
+   "metric": "flare_x_class",
+   "lead_days": 0,
+   "type": "PROB",
+   "statement": "SWPC: 5% chance of X-class flare on 2026-11-14",
+   "observed_value": false,
+   "brier": 0.0025,
+   "verdict": "HIT"
+  }
+ ]
+}
