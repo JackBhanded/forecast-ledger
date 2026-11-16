@@ -1,0 +1,114 @@
+{
+ "date": "2026-11-16",
+ "domain": "weather",
+ "snapshot_utc": "2026-11-16T07:07:28.579962+00:00",
+ "claims": [
+  {
+   "id": "wx-2026-11-17-kalaburagi-icon_seamless-rainprob",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-17",
+   "lead_days": 1,
+   "probability": 0.0,
+   "statement": "icon_seamless: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-17"
+  },
+  {
+   "id": "wx-2026-11-17-kalaburagi-icon_seamless-tmax",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-17",
+   "lead_days": 1,
+   "predicted_value": 33.5,
+   "statement": "icon_seamless: max 33.5\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-17"
+  },
+  {
+   "id": "wx-2026-11-18-kalaburagi-icon_seamless-rainprob",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-18",
+   "lead_days": 2,
+   "probability": 0.0,
+   "statement": "icon_seamless: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-18"
+  },
+  {
+   "id": "wx-2026-11-18-kalaburagi-icon_seamless-tmax",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-18",
+   "lead_days": 2,
+   "predicted_value": 32.7,
+   "statement": "icon_seamless: max 32.7\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-18"
+  },
+  {
+   "id": "wx-2026-11-19-kalaburagi-icon_seamless-rainprob",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "PROB",
+   "metric": "rain_event",
+   "target_date": "2026-11-19",
+   "lead_days": 3,
+   "probability": 0.0,
+   "statement": "icon_seamless: 0% rain chance, Kalaburagi (Gulbarga), Karnataka, 2026-11-19"
+  },
+  {
+   "id": "wx-2026-11-19-kalaburagi-icon_seamless-tmax",
+   "source": "icon_seamless",
+   "location": "kalaburagi",
+   "type": "MODEL",
+   "metric": "tmax_c",
+   "target_date": "2026-11-19",
+   "lead_days": 3,
+   "predicted_value": 31.6,
+   "statement": "icon_seamless: max 31.6\u00b0C, Kalaburagi (Gulbarga), Karnataka, 2026-11-19"
+  }
+ ],
+ "raw": {
+  "pune:best_match:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "pune:ecmwf_ifs025:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "pune:gfs_seamless:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "pune:icon_seamless:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "kalaburagi:best_match:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "kalaburagi:ecmwf_ifs025:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "kalaburagi:gfs_seamless:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "kalaburagi:icon_seamless": {
+   "time": [
+    "2026-11-16",
+    "2026-11-17",
+    "2026-11-18",
+    "2026-11-19"
+   ],
+   "precipitation_sum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "precipitation_probability_max": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "temperature_2m_max": [
+    33.0,
+    33.5,
+    32.7,
+    31.6
+   ],
+   "temperature_2m_min": [
+    19.4,
+    20.0,
+    20.2,
+    18.5
+   ]
+  }
+ }
+}
