@@ -1,0 +1,16 @@
+{
+ "date": "2026-11-17",
+ "domain": "weather",
+ "snapshot_utc": "2026-11-17T08:22:36.409938+00:00",
+ "claims": [],
+ "raw": {
+  "pune:best_match:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "pune:ecmwf_ifs025:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "pune:gfs_seamless:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "pune:icon_seamless:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "kalaburagi:best_match:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "kalaburagi:ecmwf_ifs025:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "kalaburagi:gfs_seamless:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)",
+  "kalaburagi:icon_seamless:error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=30)"
+ }
+}
